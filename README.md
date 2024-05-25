@@ -4,6 +4,9 @@
 This project involves the analysis and prediction of customer churn using a dataset from a telecommunications company. Below is an overview of the steps taken and the techniques used.
 Data Preprocessing
 
+**Dataset:**
+Kostas Diamantaras. (2020). Customer Churn Prediction 2020. Kaggle. https://kaggle.com/competitions/customer-churn-prediction-2020
+
 **1.	Loading and Initial Inspection**
 •	Load the data and inspect a random sample to understand its structure.
 
