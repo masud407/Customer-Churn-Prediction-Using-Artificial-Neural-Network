@@ -1,4 +1,4 @@
-Kaggle Titanic - Machine Learning from Disaster 
+adKaggle Titanic - Machine Learning from Disaster 
 
 This project is an end-to-end machine learning workflow for the Kaggle Titanic Dataset, implemented in Google Colab using Python. It covers data preprocessing, feature engineering, model training, evaluation, and submission file generation.
 
