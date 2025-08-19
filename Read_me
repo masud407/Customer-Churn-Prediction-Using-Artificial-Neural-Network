@@ -1,0 +1,112 @@
+Kaggle Titanic - Machine Learning from Disaster 
+
+This project is an end-to-end machine learning workflow for the Kaggle Titanic Dataset, implemented in Google Colab using Python. It covers data preprocessing, feature engineering, model training, evaluation, and submission file generation.
+
+ Dataset
+
+The dataset used is from Kaggle Titanic Competition, consisting of:
+
+train.csv – Contains passenger details and survival labels.
+
+test.csv – Contains passenger details without survival labels (to predict).
+
+🔧 Requirements
+
+The project uses the following Python libraries:
+
+numpy
+pandas
+matplotlib
+scikit-learn
+xgboost
+
+
+If running locally, install via:
+
+pip install numpy pandas matplotlib scikit-learn xgboost
+
+
+In Google Colab, these are pre-installed.
+
+📊 Workflow
+1. Data Loading
+
+Train and test datasets are uploaded via Colab’s file upload widget.
+
+The datasets are combined temporarily for preprocessing.
+
+2. Data Preprocessing
+
+Dropped irrelevant columns: Name, Ticket.
+
+Filled missing values:
+
+Age → mean age
+
+Fare → mean fare
+
+Cabin → placeholder "X000"
+
+Embarked → placeholder "X"
+
+Extracted cabin details into:
+
+cabin_letter (alphabetic part)
+
+cabin_number (numeric part)
+
+Applied one-hot encoding to categorical features (Sex, Embarked, Cabin).
+
+3. Feature Engineering
+
+Pclass_bin_Fare = Fare // Pclass
+
+Pclass_bin_sex = Pclass - Sex_female
+
+4. Model Training & Evaluation
+
+Multiple models were trained and compared:
+
+Model	Accuracy
+Logistic Regression	0.7933
+XGBoost Classifier	0.7709
+Random Forest Classifier	0.8156 ✅
+Decision Tree Classifier	0.7933
+Support Vector Classifier	0.6760
+Gradient Boosting Classifier	0.7877
+K-Nearest Neighbors (k=5)	0.6704
+
+👉 Random Forest performed the best.
+
+5. Submission File Generation
+
+Predictions were generated on test.csv using the best-performing model (Random Forest).
+
+Output saved as output.csv in the required Kaggle format:
+
+PassengerId,Survived
+892,0
+893,1
+894,0
+...
+
+
+File can be downloaded locally or saved to Google Drive.
+
+▶️ How to Run
+
+Open the notebook in Google Colab.
+
+Upload train.csv and test.csv.
+
+Run all cells sequentially.
+
+Download output.csv for submission to Kaggle.
+
+📈 Results
+
+Best model: Random Forest
+
+Accuracy on validation set: 81.6%
+
+Output file ready for submission.
